@@ -13,7 +13,7 @@ require 'faker'
   restaurant = Restaurant.new(
     name: Faker::Company.name,
     address: "#{Faker::Address.street_address}, #{Faker::Address.city}",
-    category: ["chinese", "italian", "japanese", "french", "belgian"].sample
+    category: ["Chinese", "Italian", "Japanese", "French", "Belgian"].sample
   )
   restaurant.save!
 end

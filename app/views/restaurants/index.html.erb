@@ -1,2 +1,9 @@
 <h1>Browse Restaurants</h1>
-<%= @restaurants %>
+<%= link_to "Add a restaurant", new_restaurant_path, :class => "btn btn-primary py-1" %>
+<br>
+<br>
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+  <% end %>
+</ul>

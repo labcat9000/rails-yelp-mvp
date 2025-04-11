@@ -1,0 +1,13 @@
+<h2><%= @restaurant.name %></h2>
+<p><%= @restaurant.address %></p>
+<p><%= @restaurant.category %></p>
+<br>
+<hr>
+<h3>Write a review for <%= @restaurant.name %></h3>
+<%= simple_form_for @review do |f| %>
+  <%= f.input :rating, label: "Rate from 0-5" %>
+  <%= f.input :content, label: "Share your thoughts" %>
+  <%= f.submit "Submit review", class: "btn btn-primary" %>
+<% end %>
+<br>
+<%= link_to "Back to browse", restaurants_path, :class => "btn btn-outline-primary" %>
